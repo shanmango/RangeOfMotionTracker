@@ -25,21 +25,50 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        ImageButton stick = (ImageButton) findViewById(R.id.stick);
+        stick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent intent = new Intent(getApplicationContext(), asdf.class);
+                startActivity(intent);
 
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(intent, 0);
                 }
 
 
+
+
+            }
+        });
+        ImageButton pos_three = (ImageButton) findViewById(R.id.pos_three);
+        stick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), asdf.class);
+                startActivity(intent);
+
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(intent, 0);
+                }
+
             }
         });
 
 
+        ImageButton rsz_pos_two = (ImageButton) findViewById(R.id.rsz_pos_two);
+        stick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), asdf.class);
+                startActivity(intent);
+
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(intent, 0);
+                }
+
+            }
+        });
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
